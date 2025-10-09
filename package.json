@@ -1,0 +1,27 @@
+{
+  "name": "hexo-plugin-apache-echarts",
+  "version": "1.0.0",
+  "description": "A Hexo plugin for rendering Apache ECharts diagrams",
+  "main": "index.js",
+  "keywords": [
+    "hexo",
+    "plugin",
+    "echarts",
+    "apache-echarts",
+    "charts",
+    "visualization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "chai": "^4.3.0"
+  },
+  "peerDependencies": {
+    "hexo": ">=3.0.0"
+  },
+  "dependencies": {}
+}
