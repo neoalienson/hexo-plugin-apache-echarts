@@ -1,7 +1,7 @@
 {
   "name": "hexo-plugin-apache-echarts",
   "version": "1.0.0",
-  "description": "A Hexo plugin for rendering Apache ECharts diagrams",
+  "description": "A Hexo plugin for rendering Apache ECharts diagrams in blog posts",
   "main": "index.js",
   "keywords": [
     "hexo",
@@ -11,8 +11,16 @@
     "charts",
     "visualization"
   ],
-  "author": "",
+  "author": "Neo Alienson <neo@01man.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neoalienson/hexo-plugin-apache-echarts.git"
+  },
+  "homepage": "https://github.com/neoalienson/hexo-plugin-apache-echarts#readme",
+  "bugs": {
+    "url": "https://github.com/neoalienson/hexo-plugin-apache-echarts/issues"
+  },
   "scripts": {
     "test": "mocha test/*.test.js"
   },
@@ -23,5 +31,12 @@
   "peerDependencies": {
     "hexo": ">=3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ]
 }
