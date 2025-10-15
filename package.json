@@ -1,6 +1,6 @@
 {
   "name": "hexo-plugin-apache-echarts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Hexo plugin for rendering Apache ECharts diagrams in blog posts",
   "main": "index.js",
   "keywords": [
@@ -37,6 +37,7 @@
   },
   "files": [
     "index.js",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ]
 }

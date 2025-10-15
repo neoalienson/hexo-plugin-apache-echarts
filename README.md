@@ -16,7 +16,16 @@ Add the following configuration to your `_config.yml`:
 echarts:
   enable: true
   js_url: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js'
+  id_generation: 'random'  # 'random' for performance, 'hash' for consistency
 ```
+
+### Configuration Options
+
+- `enable`: Enable/disable the plugin (default: `true`)
+- `js_url`: CDN URL for ECharts library (default: jsdelivr CDN)
+- `id_generation`: ID generation method (default: `'random'`)
+  - `'random'`: Generate random IDs for better performance
+  - `'hash'`: Generate hash-based IDs from chart content for consistency
 
 ## Usage
 
@@ -47,6 +56,27 @@ Use the `echarts` tag in your markdown files:
 
 - Interactive client-side charts
 - CDN-based ECharts library loading
+- Configurable ID generation (random or hash-based)
+- Automatic ECharts script injection
+- Support for all ECharts chart types
+
+## Development
+
+### Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+### Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Add tests for new functionality
+4. Ensure all tests pass
+5. Submit a pull request
 
 ## License
 

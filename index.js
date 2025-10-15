@@ -1,11 +1,13 @@
 'use strict';
 /* global hexo */
 
+const crypto = require('crypto');
 const log = hexo.log || console;
 
 hexo.config.echarts = Object.assign({
     enable: true,
-    js_url: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js'
+    js_url: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js',
+    id_generation: 'random' // 'random' for performance, 'hash' for consistency
 }, hexo.config.echarts);
 
 global.hexo = Object.assign(hexo, global.hexo);
@@ -43,7 +45,13 @@ if (hexo.config.echarts.enable) {
     });
     
     hexo.extend.tag.register('echarts', (arg, content) => {
-        const chartId = 'chart_' + Math.random().toString(36).substr(2, 9);
+        let chartId;
+        if (hexo.config.echarts.id_generation === 'hash') {
+            const hash = crypto.createHash('md5').update(content).digest('hex').substr(0, 9);
+            chartId = 'chart_' + hash;
+        } else {
+            chartId = 'chart_' + Math.random().toString(36).substr(2, 9);
+        }
         return `<div id="${chartId}" class="echarts" style="width: 800px; height: 600px;"></div>
 <script>
 (function() {
