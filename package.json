@@ -1,6 +1,6 @@
 {
   "name": "hexo-plugin-apache-echarts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Hexo plugin for rendering Apache ECharts diagrams in blog posts",
   "main": "index.js",
   "keywords": [

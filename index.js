@@ -7,7 +7,8 @@ const log = hexo.log || console;
 hexo.config.echarts = Object.assign({
     enable: true,
     js_url: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js',
-    id_generation: 'random' // 'random' for performance, 'hash' for consistency
+    id_generation: 'random', // 'random' for performance, 'hash' for consistency
+    priority: 0
 }, hexo.config.echarts);
 
 global.hexo = Object.assign(hexo, global.hexo);
@@ -42,7 +43,7 @@ if (hexo.config.echarts.enable) {
                 route.set(hpath, htmls[hpath]);
             }
         });
-    });
+    }, hexo.config.echarts.priority);
     
     hexo.extend.tag.register('echarts', (arg, content) => {
         let chartId;

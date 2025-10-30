@@ -17,6 +17,7 @@ echarts:
   enable: true
   js_url: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js'
   id_generation: 'random'  # 'random' for performance, 'hash' for consistency
+  priority: 0  # Filter execution priority
 ```
 
 ### Configuration Options
@@ -26,6 +27,7 @@ echarts:
 - `id_generation`: ID generation method (default: `'random'`)
   - `'random'`: Generate random IDs for better performance
   - `'hash'`: Generate hash-based IDs from chart content for consistency
+- `priority`: Filter execution priority (default: `0`). Lower values run first
 
 ## Usage
 
